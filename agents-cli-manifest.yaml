@@ -1,0 +1,19 @@
+name: 'meal-recipe-agent'
+acli_version: '1.9.0'
+agent_directory: 'app'
+region: 'us-central1'
+base_template: 'adk'
+generated_at: '2026-10-11T06:26:08.256244+00:00'
+language: 'python'
+framework: 'google-adk'
+create_params:
+  # The ADK name of the root agent, as rendered into the agent source. Rename
+  # the agent and you must change it in both places: telemetry reports this as
+  # gen_ai.agent.name, and it is what agents-cli reports for the project.
+  root_agent_name: 'meal_recipe_agent'
+  deployment_target: 'cloud_run'
+  session_type: 'in_memory'
+  cicd_runner: 'github_actions'
+  is_a2a: true
+  agent_gateway: False
+  agent_guidance_filename: 'GEMINI.md'
